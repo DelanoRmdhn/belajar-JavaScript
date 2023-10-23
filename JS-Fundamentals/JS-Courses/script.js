@@ -34,3 +34,16 @@ if (tahunSekarang - tahunKelahiran >= umurMinimal) {
     } tahun lagi.`
   );
 }
+
+// KONVERSI TIPE DATA
+
+// konversi string ke number
+const y = "2006";
+const hasil = Number(y) + 10;
+console.log(hasil);
+
+// konversi number ke string
+let umur = 10;
+console.log(typeof String(umur)); //konversi ke string
+
+console.log("nama saya delano dan umur saya " + umur + "."); //javascript mengkonversi number ke string secara otomatis
