@@ -1,47 +1,47 @@
-// Coding Challenge #1
+/* 
+Steven wants to build a very simple tip calculator for whenever he goes eating in a
+restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and
+300. If the value is different, the tip is 20%.
 
-// Mark and John are trying to compare their BMI (Body Mass Index), which is
-// calculated using the formula:
-// BMI = mass / height ** 2 = mass / (height * height) (mass in kg
-// and height in meter).
-// Your tasks:
-// 1. Store Mark's and John's mass and height in variables
-// 2. Calculate both their BMIs using the formula (you can even implement both
-// versions)
-// 3. Create a Boolean variable 'markHigherBMI' containing information about
-// whether Mark has a higher BMI than John.
-// Test data:
-//    Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95
-// m tall.
-//    Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76
-// m tall.
+Your tasks:
+1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for
+this. It's not allowed to use an if/else statement.(If it's easier for you, you can
+start with an if/else statement, and then try to convert it to a ternary
+operator!)
+2. Print a string to the console containing the bill value, the tip, and the final value
+(bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value
+316.25”
+Test data:
+§ Data 1: Test for bill values 275, 40 and 430
+Hints:
+§ To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+§ Value X is between 50 and 300, if it's >= 50 && <= 300 �
+*/
 
-//DATA 1
-let markMass = 78;
-let markHeight = 1.69;
+//1)
 
-let johnMass = 92;
-let johnHeight = 1.95;
+let tip;
+const bill1 = 275;
+const bill2 = 40;
+const bill3 = 430;
 
-//DATA 2
-let markMass2 = 95;
-let markHeight2 = 1.88;
+// BILL 1
+tip = bill1 >= 50 && bill1 <= 300 ? bill1 * 0.15 : bill1 * 0.2;
+let total1 = bill1 + tip;
 
-let johnMass2 = 85;
-let johnHeight2 = 1.76;
+console.log(`The bill was ${bill1}, the tip was ${tip}, and the total value
+is ${total1}`);
 
-let bmiMark = markMass / (markHeight * markHeight);
-let bmiJohn = johnMass / (johnHeight * johnHeight);
+//BILL 2
+tip = bill2 >= 50 && bill2 <= 300 ? bill2 * 0.15 : bill2 * 0.2;
+let total2 = bill1 + tip;
 
-console.log(bmiMark);
-console.log(bmiJohn);
+console.log(`The bill was ${bill2}, the tip was ${tip}, and the total value
+is ${total2}`);
 
-if (bmiMark > bmiJohn) {
-  console.log(
-    `Mark's BMI is ${bmiMark} and John's BMI is ${bmiJohn} so Mark's BMI is higher`
-  );
-} else {
-  console.log(
-    `John's BMI is ${bmiJohn} and Mark's BMI is ${bmiMark} so John's BMI is higher`
-  );
-}
+//BILL 3
+tip = bill3 >= 50 && bill3 <= 300 ? bill3 * 0.15 : bill3 * 0.2;
+let total3 = bill1 + tip;
+
+console.log(`The bill was ${bill3}, the tip was ${tip}, and the total value
+is ${total3}`);
