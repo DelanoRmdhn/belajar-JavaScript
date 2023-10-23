@@ -1,30 +1,43 @@
-//LOGICAL OPERATOR
-/* 
-AND &&
-OR ||
-NOT !
-*/
+//SWITCH CASE
+let condition = true;
+while (condition) {
+  const inputHari = prompt("Masukkan hari untuk mengetahui Jobdesk Anda : ");
 
-const belajarJavascript = true; //VAR A
-const durasiBelajar = 5; //VAR B
+  if (inputHari === null) {
+    alert("SELESAI");
+    break; // Hentikan loop jika pengguna membatalkan prompt
+  }
 
-if (belajarJavascript && durasiBelajar >= 4) {
-  console.log("Anda Boleh Bermain Valheim!");
-} else {
-  console.log("Anda Tidak Boleh Bermain Valheim!");
+  switch (inputHari) {
+    case "senin":
+      console.log("Jobdesk Senin");
+      console.log("Mengajar Lowell");
+      console.log("Mempelajari Javascript");
+      break;
+    case "selasa":
+      console.log("Jobdesk Selasa");
+      console.log("Mempelajari Servo di Gundar");
+      console.log("Menyiapkan bahan pengajaran besok");
+      break;
+    case "rabu":
+      console.log("Jobdesk Rabu");
+      console.log("Mengajar di Tunas Metropolitan");
+      console.log("Belajar Javascript");
+      break;
+    case "kamis":
+    case "jumaat":
+      console.log("Jobdesk Kamis dan Jumaat");
+      console.log("Mengajar Lowell");
+      console.log("Mempelajari Javascript");
+      break;
+    case "sabtu":
+    case "minggu":
+      console.log("Jobdesk Sabtu dan Minggu");
+      console.log("VALHEIM AMPE BEGO!");
+      break;
+    default:
+      prompt("Hari Tidak Tersedia");
+  }
+
+  alert("Anda ingin melihat hari lainnya?");
 }
-
-/* 
-ketika kondisi belajarJavascript bernilai true dan durasi belajar lebih dari 4 maka akan menampilkan "Anda Boleh Bermain Valheim!"
-*/
-
-const apakahLelah = false;
-if (belajarJavascript && durasiBelajar >= 4 && !apakahLelah) {
-  console.log("Anda Boleh Bermain Valheim!");
-} else {
-  console.log("Anda Tidak Boleh Bermain Valheim!");
-}
-
-/* 
-ketika kondisi belajarJavascript bernilai true dan durasi belajar lebih dari 4 dan apakahLelah bernilai NOT false maka akan menampilkan "Anda Boleh Bermain Valheim!"
-*/
