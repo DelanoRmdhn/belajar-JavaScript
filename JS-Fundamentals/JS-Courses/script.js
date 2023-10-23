@@ -1,49 +1,30 @@
-// VARIABEL DAN NILAI
-let userName = "Delano";
-console.log(userName);
+//LOGICAL OPERATOR
+/* 
+AND &&
+OR ||
+NOT !
+*/
 
-// DYNAMIC TYPING DAN TYPEOF
-let age = 30;
-console.log(typeof age);
+const belajarJavascript = true; //VAR A
+const durasiBelajar = 5; //VAR B
 
-//contoh dynamic Typing
-let firstName = "Delano";
-console.log(firstName);
-
-firstName = "ilham";
-console.log(firstName);
-//kesimpulannya dynamic typing memungkinkan suatu variabel mampu menimpa nilai yang berbeda
-
-//IF ELSE STATEMENT
-const tahunSekarang = 2023;
-const tahunKelahiran = 2010;
-const umurMinimal = 17;
-
-if (tahunSekarang - tahunKelahiran >= umurMinimal) {
-  console.log(
-    `Umur anda saat ini adalah ${
-      tahunSekarang - tahunKelahiran
-    }. Maka anda boleh membuat SIM`
-  );
+if (belajarJavascript && durasiBelajar >= 4) {
+  console.log("Anda Boleh Bermain Valheim!");
 } else {
-  console.log(
-    `Umur anda saat ini adalah ${
-      tahunSekarang - tahunKelahiran
-    }. Anda baru boleh membuat SIM ${
-      umurMinimal - (tahunSekarang - tahunKelahiran)
-    } tahun lagi.`
-  );
+  console.log("Anda Tidak Boleh Bermain Valheim!");
 }
 
-// KONVERSI TIPE DATA
+/* 
+ketika kondisi belajarJavascript bernilai true dan durasi belajar lebih dari 4 maka akan menampilkan "Anda Boleh Bermain Valheim!"
+*/
 
-// konversi string ke number
-const y = "2006";
-const hasil = Number(y) + 10;
-console.log(hasil);
+const apakahLelah = false;
+if (belajarJavascript && durasiBelajar >= 4 && !apakahLelah) {
+  console.log("Anda Boleh Bermain Valheim!");
+} else {
+  console.log("Anda Tidak Boleh Bermain Valheim!");
+}
 
-// konversi number ke string
-let umur = 10;
-console.log(typeof String(umur)); //konversi ke string
-
-console.log("nama saya delano dan umur saya " + umur + "."); //javascript mengkonversi number ke string secara otomatis
+/* 
+ketika kondisi belajarJavascript bernilai true dan durasi belajar lebih dari 4 dan apakahLelah bernilai NOT false maka akan menampilkan "Anda Boleh Bermain Valheim!"
+*/
