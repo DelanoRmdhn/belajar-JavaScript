@@ -24,3 +24,21 @@ const jusApelJeruk = kandunganJus(1, 4);
 console.log(jusApelJeruk);
 
 // dengan membuat variabel baru (jusApelJeruk) kita bisa memanggil function kandunganJus dan menggunakan function tersebut.
+
+// Deklarasi Function VS Ekspresi
+
+/// Function Deklarasi
+function hitungUmur1(tahunLahir) {
+  return 2023 - tahunLahir;
+}
+
+const umur1 = hitungUmur1(2006);
+
+/// Function Ekspresi
+const hitungUmur2 = function (tahunLahir) {
+  return 2023 - tahunLahir;
+};
+
+const umur2 = hitungUmur2(2006);
+
+console.log(umur1, umur2);
