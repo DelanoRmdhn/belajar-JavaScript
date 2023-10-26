@@ -58,6 +58,7 @@ console.log(sisaTahun2(2006, "Budi"));
 
 // Function di dalam Function
 
+// STUDI KASUS 1
 function umurSaya(tahunLahir) {
   return 2023 - tahunLahir;
 }
@@ -70,6 +71,7 @@ function waktuPensiun(tahunLahir) {
 
 console.log(waktuPensiun(2006));
 
+// STUDI KASUS 2
 function potongKecil(potongan) {
   return potongan * 4;
 }
