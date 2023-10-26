@@ -42,3 +42,16 @@ const hitungUmur2 = function (tahunLahir) {
 const umur2 = hitungUmur2(2006);
 
 console.log(umur1, umur2);
+
+// Arrow Function
+const sisaTahun = (umur) => 65 - umur;
+console.log(sisaTahun(17));
+
+//bentuk lain
+const sisaTahun2 = (tahunLahir, nama) => {
+  const umur = 2023 - tahunLahir;
+  const waktuPensiun = 65 - umur;
+  return `${nama} akan pensiun dalam ${waktuPensiun} tahun`;
+};
+
+console.log(sisaTahun2(2006, "Budi"));
