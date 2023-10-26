@@ -55,3 +55,31 @@ const sisaTahun2 = (tahunLahir, nama) => {
 };
 
 console.log(sisaTahun2(2006, "Budi"));
+
+// Function di dalam Function
+
+function umurSaya(tahunLahir) {
+  return 2023 - tahunLahir;
+}
+
+function waktuPensiun(tahunLahir) {
+  const umur = umurSaya(tahunLahir);
+  const sisaWaktuPensiun = 65 - umur;
+  return `Sisa Tahun sebelum anda pensiun adalah ${sisaWaktuPensiun} tahun`;
+}
+
+console.log(waktuPensiun(2006));
+
+function potongKecil(potongan) {
+  return potongan * 4;
+}
+
+function buah(apel, plum) {
+  console.log(`total buah ada ${apel} apel dan ${plum} plum`);
+  const potongApel = potongKecil(apel);
+  const potongPlum = potongKecil(plum);
+  const setelahDiPotong = `setelah di potong ada ${potongApel} buah potongan apel dan ${potongPlum} buah potongan plum`;
+  return setelahDiPotong;
+}
+
+console.log(buah(5, 2));
