@@ -1,87 +1,32 @@
 "use strict";
 
-// FUNCTION
-function panggil() {
-  console.log("Halo adik adik");
+//ARRAY
+const temanKu = ["Fakhri", "Kebab", "Pael"];
+console.log(temanKu);
+
+//penggunaan properti length
+console.log(temanKu.length);
+
+//mengubah isi salah sati data pada array
+temanKu[2] = "Ilham";
+console.log(temanKu);
+
+//membuat array di dalam array
+const dataDiri = ["Delano", "Ramadhan", 2023 - 2006, temanKu];
+console.log(dataDiri);
+
+//penggunaan function dan array
+function calcAge(birthYear) {
+  return 2023 - birthYear;
 }
 
-panggil();
-panggil();
-panggil();
+const umur = [2000, 1976, 1981, 2006];
+const umur1 = calcAge(umur[0]);
+const umur2 = calcAge(umur[1]);
+const umur3 = calcAge(umur[umur.length - 1]);
 
-function kandunganJus(apel, jeruk) {
-  const bahanJus = `Jus ini memiliki ${apel} apel dan ${jeruk} jeruk`;
-  return bahanJus; //statement return mengembalikan ekspresi bahan jus.
-}
+console.log(umur1, umur2, umur3);
 
-kandunganJus(3, 4); //3 dan 4 adalah parameter dari function kandunganJus
-
-const jus = kandunganJus(3, 4); //untuk mengembalikan ekspresi bahan jus kita harus masukan kedalam variable
-console.log(jus); //menampilkan ekspresi bahan jus yang telah di kembalikan
-
-//menggunakan 1 function berkali kali
-const jusApelJeruk = kandunganJus(1, 4);
-console.log(jusApelJeruk);
-
-// dengan membuat variabel baru (jusApelJeruk) kita bisa memanggil function kandunganJus dan menggunakan function tersebut.
-
-// Deklarasi Function VS Ekspresi
-
-/// Function Deklarasi
-function hitungUmur1(tahunLahir) {
-  return 2023 - tahunLahir;
-}
-
-const umur1 = hitungUmur1(2006);
-
-/// Function Ekspresi
-const hitungUmur2 = function (tahunLahir) {
-  return 2023 - tahunLahir;
-};
-
-const umur2 = hitungUmur2(2006);
-
-console.log(umur1, umur2);
-
-// Arrow Function
-const sisaTahun = (umur) => 65 - umur;
-console.log(sisaTahun(17));
-
-//bentuk lain
-const sisaTahun2 = (tahunLahir, nama) => {
-  const umur = 2023 - tahunLahir;
-  const waktuPensiun = 65 - umur;
-  return `${nama} akan pensiun dalam ${waktuPensiun} tahun`;
-};
-
-console.log(sisaTahun2(2006, "Budi"));
-
-// Function di dalam Function
-
-// STUDI KASUS 1
-function umurSaya(tahunLahir) {
-  return 2023 - tahunLahir;
-}
-
-function waktuPensiun(tahunLahir) {
-  const umur = umurSaya(tahunLahir);
-  const sisaWaktuPensiun = 65 - umur;
-  return `Sisa Tahun sebelum anda pensiun adalah ${sisaWaktuPensiun} tahun`;
-}
-
-console.log(waktuPensiun(2006));
-
-// STUDI KASUS 2
-function potongKecil(potongan) {
-  return potongan * 4;
-}
-
-function buah(apel, plum) {
-  console.log(`total buah ada ${apel} apel dan ${plum} plum`);
-  const potongApel = potongKecil(apel);
-  const potongPlum = potongKecil(plum);
-  const setelahDiPotong = `setelah di potong ada ${potongApel} buah potongan apel dan ${potongPlum} buah potongan plum`;
-  return setelahDiPotong;
-}
-
-console.log(buah(5, 2));
+//menggabungkan array
+const semuaUmur = [umur1, umur2, calcAge(umur[umur.length - 1])];
+console.log(semuaUmur);
