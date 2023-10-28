@@ -30,3 +30,19 @@ console.log(umur1, umur2, umur3);
 //menggabungkan array
 const semuaUmur = [umur1, umur2, calcAge(umur[umur.length - 1])];
 console.log(semuaUmur);
+
+///METHOD PADA ARRAY
+
+/// Tambah Data
+temanKu.push("Kurniawan"); // menambahkan data diakhir array temanKu
+console.log(temanKu);
+
+temanKu.unshift("Hanip"); //menambahkan data diawal array temanKu
+
+/// Hapus Data
+temanKu.pop(); // menghapus data diakhir array temanKu
+temanKu.shift(); // menghapus data diawal array temanKu
+
+/// Memeriksa data pada array
+console.log(temanKu.indexOf("Kebab")); //benar = 1 salah = -1
+console.log(temanKu.includes("Fakhri")); //benar = true salah = false  (direkomendasikan!)
