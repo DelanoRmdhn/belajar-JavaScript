@@ -1,48 +1,29 @@
 "use strict";
 
-//ARRAY
-const temanKu = ["Fakhri", "Kebab", "Pael"];
-console.log(temanKu);
+// OBJECT
+const delano = {
+  namaDepan: "Delano",
+  namaBelakang: "Ramadhan",
+  umur: 2023 - 2006,
+  temanKu: ["Fakhri", "Kebab", "Pael"],
+};
 
-//penggunaan properti length
-console.log(temanKu.length);
+console.log(delano);
 
-//mengubah isi salah sati data pada array
-temanKu[2] = "Ilham";
-console.log(temanKu);
+// Mengambil salah satu properti data pada object
+//Notasi Titik
+console.log(delano.namaDepan);
+console.log(delano.temanKu[0]);
 
-//membuat array di dalam array
-const dataDiri = ["Delano", "Ramadhan", 2023 - 2006, temanKu];
-console.log(dataDiri);
+//Notasi kurung
+console.log(delano["namaBelakang"]);
+console.log(delano["temanKu"][1]);
 
-//penggunaan function dan array
-function calcAge(birthYear) {
-  return 2023 - birthYear;
-}
+// Menambah properti data pada object
+//Notasi Titik
 
-const umur = [2000, 1976, 1981, 2006];
-const umur1 = calcAge(umur[0]);
-const umur2 = calcAge(umur[1]);
-const umur3 = calcAge(umur[umur.length - 1]);
+delano.domisili = "Indonesia";
 
-console.log(umur1, umur2, umur3);
-
-//menggabungkan array
-const semuaUmur = [umur1, umur2, calcAge(umur[umur.length - 1])];
-console.log(semuaUmur);
-
-///METHOD PADA ARRAY
-
-/// Tambah Data
-temanKu.push("Kurniawan"); // menambahkan data diakhir array temanKu
-console.log(temanKu);
-
-temanKu.unshift("Hanip"); //menambahkan data diawal array temanKu
-
-/// Hapus Data
-temanKu.pop(); // menghapus data diakhir array temanKu
-temanKu.shift(); // menghapus data diawal array temanKu
-
-/// Memeriksa data pada array
-console.log(temanKu.indexOf("Kebab")); //benar = 1 salah = -1
-console.log(temanKu.includes("Fakhri")); //benar = true salah = false  (direkomendasikan!)
+//Notasi Kurung
+delano["makananFavorit"] = ["Rendang", "Nasi Goreng", "Steak Daging"];
+console.log(delano["makananFavorit"]);
