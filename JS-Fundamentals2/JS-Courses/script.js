@@ -4,7 +4,7 @@
 const delano = {
   namaDepan: "Delano",
   namaBelakang: "Ramadhan",
-  umur: 2023 - 2006,
+  tahunLahir: 2006,
   temanKu: ["Fakhri", "Kebab", "Pael"],
 };
 
@@ -28,13 +28,26 @@ delano.domisili = "Indonesia";
 delano["makananFavorit"] = ["Rendang", "Nasi Goreng", "Steak Daging"];
 console.log(delano["makananFavorit"]);
 
-// BONUS
-//Delano mempunyai 3 makanan kesukaan, dan makanan favoritnya adalah steak daging.
-//ubah Delano,3 makanan kesukaan,dan steak daging menjadi dinamis!\
+// METHOD OBJECT
 
-const kalimatDenganNotasiKurung = `${delano["namaDepan"]} mempunyai ${delano["makananFavorit"].length} makanan kesukaan, dan makanan favoritnya adalah ${delano["makananFavorit"][2]}`;
+// Function di dalam object menggunakan parameter
 
-const kalimatDenganNotasiTitik = `${delano.namaDepan} mempunyai ${delano.makananFavorit.length} makanan kesukaan, dan makanan favoritnya adalah ${delano.makananFavorit[2]}`;
+delano["hitungUmur1"] = function (tahunLahir) {
+  return 2023 - tahunLahir;
+};
 
-console.log(kalimatDenganNotasiKurung);
-console.log(kalimatDenganNotasiTitik);
+console.log(delano);
+const umurSekarang = delano.hitungUmur1(delano.tahunLahir);
+console.log(
+  `Umur ${delano.namaDepan} saat ini adalah ${umurSekarang} tahun. (object dengan parameter)`
+);
+
+// Function di dalam object tanpa parameter
+delano.hitungUmur2 = function () {
+  return 2023 - this.tahunLahir; //this sama saja seperti delano.tahunLahir
+};
+
+const umurSekarang2 = delano.hitungUmur2();
+console.log(
+  `Umur ${delano.namaDepan} saat ini adalah ${umurSekarang2} tahun. (object tanpa parameter)`
+);
