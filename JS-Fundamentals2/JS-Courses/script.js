@@ -27,3 +27,14 @@ delano.domisili = "Indonesia";
 //Notasi Kurung
 delano["makananFavorit"] = ["Rendang", "Nasi Goreng", "Steak Daging"];
 console.log(delano["makananFavorit"]);
+
+// BONUS
+//Delano mempunyai 3 makanan kesukaan, dan makanan favoritnya adalah steak daging.
+//ubah Delano,3 makanan kesukaan,dan steak daging menjadi dinamis!\
+
+const kalimatDenganNotasiKurung = `${delano["namaDepan"]} mempunyai ${delano["makananFavorit"].length} makanan kesukaan, dan makanan favoritnya adalah ${delano["makananFavorit"][2]}`;
+
+const kalimatDenganNotasiTitik = `${delano.namaDepan} mempunyai ${delano.makananFavorit.length} makanan kesukaan, dan makanan favoritnya adalah ${delano.makananFavorit[2]}`;
+
+console.log(kalimatDenganNotasiKurung);
+console.log(kalimatDenganNotasiTitik);
