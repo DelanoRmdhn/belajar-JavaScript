@@ -51,3 +51,29 @@ const umurSekarang2 = delano.hitungUmur2();
 console.log(
   `Umur ${delano.namaDepan} saat ini adalah ${umurSekarang2} tahun. (object tanpa parameter)`
 );
+
+// CHALLANGES
+//buat sebuah kalimat "fakhri adalah seorang siswa magang dan memiliki SIM".
+//tampilkan kalimat tersebut secara dinamis dan gunakan data yang ada pada object
+
+const fakhri = {
+  namaDepan: "Fakhri",
+  namaBelakang: "Azis",
+  tahunLahir: 2005,
+  pekerjaan: "Siswa Magang",
+  punyaSim: true,
+
+  hitungUsiaFakhri: function () {
+    return 2023 - this.tahunLahir;
+  },
+
+  kesimpulan: function () {
+    return `${this.namaDepan} adalah seorang ${
+      this.pekerjaan
+    } berumur ${this.hitungUsiaFakhri()} tahun dan ${
+      this.punyaSim ? "memiliki" : "tidak memiliki"
+    } SIM.`;
+  },
+};
+
+console.log(fakhri.kesimpulan());
