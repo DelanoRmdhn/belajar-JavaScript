@@ -1,51 +1,61 @@
 /* 
-Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new
-gymnastics discipline, which works differently.
-Each team competes 3 times, and then the average of the 3 scores is calculated (so
-one average score per team).
-
-A team only wins if it has at least double the average score of the other team.
-Otherwise, no team wins!
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to
+implement the calculations! Remember: BMI = mass / height ** 2 = mass
+/ (height * height) (mass in kg and height in meter)
 
 Your tasks:
-1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
-2. Use the function to calculate the average for both teams
-3. Create a function 'checkWinner' that takes the average score of each team
-as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner
-to the console, together with the victory points, according to the rule above.
-Example: "Koalas win (30 vs. 13)"
-4. Use the 'checkWinner' function to determine the winner for both Data 1 and
-Data 2
-5. Ignore draws this time
+1. For each of them, create an object with properties for their full name, mass, and
+height (Mark Miller and John Smith)
 
-Test data:
-§ Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
-§ Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same
+method on both objects). Store the BMI value to a property, and also return it
+from the method
+
+3. Log to the console who has the higher BMI, together with the full name and the
+respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+
+Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m
+tall.
+GOOD LUCK 
 */
 
-// Calculating average each teams
-const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+//1 dan 2
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+  bmi: function () {
+    this.markBmi = this.mass / (this.height * this.height);
+    return this.markBmi;
+  },
+};
 
-// DATA 1
-let scoreDolphins = calcAverage(44, 23, 71);
-let scoreKoalas = calcAverage(65, 54, 49);
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+  bmi: function () {
+    this.johnBmi = this.mass / (this.height * this.height);
+    return this.johnBmi;
+  },
+};
 
-console.log(scoreDolphins, scoreKoalas);
+/*
+note : untuk menambahkan properti dari dalam function kita bisa menggunakan this. untuk contohnya ada pada baris 28 dan 38  
+*/
 
-// Checking Winner
-function checkWinner(avgDolhins, avgKoalas) {
-  if (avgDolhins >= 2 * avgKoalas) {
-    console.log(`Dolphins win (${avgDolhins} vs. ${avgKoalas})`);
-  } else if (avgKoalas >= 2 * avgDolhins) {
-    console.log(`Koalas win (${avgKoalas} vs. ${avgDolhins})`);
-  } else {
-    console.log("No team wins");
-  }
-}
+console.log(mark);
+console.log(john);
 
-checkWinner(scoreDolphins, scoreKoalas);
+//3
+console.log(mark.bmi(), john.bmi());
+const sentences =
+  mark.bmi > john.bmi
+    ? `${mark.fullName} BMI (${mark.bmi()}) is higher than ${
+        john.fullName
+      } BMI (${john.bmi()})`
+    : `${john.fullName} BMI (${john.bmi()}) is higher than ${
+        mark.fullName
+      } BMI (${mark.bmi()})`;
 
-//DATA 2
-scoreDolphins = calcAverage(85, 54, 41);
-scoreKoalas = calcAverage(23, 34, 27);
-checkWinner(scoreDolphins, scoreKoalas);
+console.log(sentences);
