@@ -47,3 +47,17 @@ for (let i = 0; i <= arrayDelano.length; i++) {
   if (typeof arrayDelano[i] === "number") break;
   console.log(arrayDelano[i]);
 }
+
+//Loop backwards
+for (let i = arrayDelano.length - 1; i >= 0; i--) {
+  console.log(`properti array indeks ke-${i} : ${arrayDelano[i]}`);
+}
+
+//Loop inside a Loop
+for (let set = 1; set < 4; set++) {
+  console.log(`Set ke-${set}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Set ke-${set} : Push Up repetisi ke-${rep}`);
+  }
+}
