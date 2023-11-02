@@ -61,4 +61,5 @@ calcAverage = function (arr) {
   return sum / arr.length;
 };
 
-console.log(calcAverage(bills));
+const averageTotals = calcAverage(totals);
+console.log(`The Totals Average is : ${averageTotals}`);
