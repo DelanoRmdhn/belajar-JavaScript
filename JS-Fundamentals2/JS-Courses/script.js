@@ -61,3 +61,23 @@ for (let set = 1; set < 4; set++) {
     console.log(`Set ke-${set} : Push Up repetisi ke-${rep}`);
   }
 }
+
+//WHILE LOOP
+let mulaiDari = 1;
+while (mulaiDari <= 10) {
+  console.log(mulaiDari);
+  mulaiDari++;
+}
+
+// tugas : Mencari angka 6
+let angkaAcak = Math.trunc(Math.random() * 6) + 1;
+console.log(angkaAcak);
+
+let i = 1;
+while (angkaAcak !== 6) {
+  console.log(`Angka acak ke-${i} = ${angkaAcak}`);
+  angkaAcak = Math.trunc(Math.random() * 6) + 1;
+
+  if (angkaAcak === 6) console.log(`Loop Berakhir...`);
+  i++;
+}
