@@ -6,6 +6,7 @@ const guess = document.querySelector('.guess');
 const message = document.querySelector('.message');
 const number = document.querySelector('.number');
 const score = document.querySelector('.score');
+const body = document.querySelector('body');
 
 //simpan data diluar DOM
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
@@ -24,6 +25,10 @@ check.addEventListener('click', function () {
   //kondisi ketika user benar
   else if (guessValue === secretNumber) {
     message.textContent = '🎉 Correct Number!';
+
+    //styling
+    body.style.backgroundColor = '#60b347';
+    number.style.width = '30rem';
   } else if (guessValue > secretNumber) {
     if (userScore > 1) {
       message.textContent = '📈 To high!';
